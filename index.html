@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="JS/app.js" defer></script>
+    <link rel="shortcut icon" href="images/pnc-logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- LIGHT MODE -->
+    <DIV class="mode">
+        <div class="light"><i class="fa fa-moon-o"></i></div>
+        <div class="dark"><i class="fa fa-sun-o"></i></div>
+    </DIV>
+
+    <!-- ------------------Starting webpage --------------------------- -->
+    <div class="container">
+        <div class="message-alert">Please, you must input your name! <i class="fa fa-close"></i></div>
+        <div class="img">
+            <img src="images/pnc-logo.png" alt="pnc-logo.png" width="100%">
+        </div>
+        <div class="container-body">
+            <h1 class="title">Study English Now</h1>
+        </div> 
+        <div class="fill-input">
+            <input type="text" id="user-name" placeholder="Your name..." required> <br>
+            <button type="button" id="next-button">Next <i class="fa fa-arrow-circle-o-right"></i></button>
+        </div>
+    </div>
+
+
+    <!-- start header container  -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img class="img" src="images/pnc-logo.png" style="width: 80px;">
+            </div>
+            <h1 class="logo-title">StudyEnglishNow</h1>
+        </div>
+        <div class="header-right">
+            <h1></h1>
+        </div>
+    </header>
+    <!-- end header container  -->
+
+    <!-- start add page edit and create display question after edit  -->
+    <div class="container2">
+        <button id="play-quiz">Back</button>
+    </div>
+    <!-- end add page edit and create display question after edit  -->
+    
+    <!-- start show question to play one by one -->
+    <div class="back-to-home">
+        <div class="show-meaning"><p>Back to home</p></div>
+        <div id="btn-back"><i class="fa fa-chevron-left"></i></div>
+    </div>
+
+    <div class="container-question">
+        <div class="question">
+            <h2></h2>
+        </div>
+        <div class="multiple-answers">
+            <li class="answer" id="answer-1"></li> 
+            <li class="answer" id="answer-2"></li>
+            <li class="answer" id="answer-3"></li>
+            <li class="answer" id="answer-4"></li>
+        </div> 
+        <div class="footer-question">
+            <div class="count-question"> <span id="count"></span>/<span id="total-questions"></span> Questions</div>
+            <button id = "next-question">NEXT <i class="fa fa-chevron-right"></i></button>
+            <button id = "sub-ans">SUBMIT</button>
+        </div>
+    </div>
+    <!-- end show question to play one by one -->
+
+    <!-- SHOW USER SCORE AND RESULT -->
+
+    <div class="container-score">
+        <h2>Result: <span class= "score"></span>%</h2>
+    </div>
+</body>
+</html>
