@@ -110,8 +110,6 @@ function back_to_menu() {
 
 // ------------start coding Play quiz--------------------------
 function playQuiz(){
-    list_of_questions = list_of_question[Math.floor(Math.random()*list_of_question.length)]
-    total_questions = list_of_questions.length;
     document.querySelector(".back-to-home").style.display = "block"
     
     let container = document.querySelector(".new-container");
@@ -410,30 +408,23 @@ let btn_back = document.querySelector('#btn-back');
 btn_back.addEventListener('click',back_to_menu);
 
 
-let list_question1 = [
+let list_of_questions = [
     {question: "Q. Tom ________ in Serbia since he was 7 years old.", answers:{answer_1: "A. lived", answer_2: "B. is living", answer_3: "C. has lived",answer_4: "D. lives"}, correct_answer: "C"} ,
     {question: "Q. They _________ go to the cinema every day.", answers:{answer_1: "A. isn't", answer_2: "B. doesn't", answer_3: "C. aren't",answer_4: "D. don't"} , correct_answer: "D"} ,
     {question: "Q. She ___________ at a hotel every day", answers:{answer_1: "A. working", answer_2: "B. works", answer_3: "C. is working",answer_4: "D. work"} , correct_answer: "B"} ,
     {question: "Q. While Tom (read) , Amely (watch) a documentary on TV.", answers:{answer_1: "A. was reading / was watching", answer_2: "B. was reading / were watching", answer_3: "C. read / watched",answer_4: "D. read / was watching"} , correct_answer: "A"} ,
     {question: "Q. He (wake) up and (look) at his watch.", answers:{answer_1: "A. waked / looked", answer_2: "B. woke/ looked", answer_3: "C. was waking / looked",answer_4: "D. waked / was looking"} , correct_answer: "B"} ,
-]
-let list_question2 = [
     {question: "Q. While I (drive), I (have) an accident.", answers:{answer_1: "A. drived/had", answer_2: "B. drove / was having", answer_3: "C. was driving/ had",answer_4: "D. drove/ had"}, correct_answer: "C" } ,
     {question: "Q. ...  you ...  London?  (ever/visit)", answers:{answer_1: "A. Have you ever visited London?", answer_2: "B. Did you ever visit London?", answer_3: "C. Has you ever visited London?",answer_4: "D. Did you ever visited London?"} , correct_answer: "A"} ,
     {question: "Q. Susan and Jane ....  at home last Monday. (not/be)", answers:{answer_1: "A. hasn't", answer_2: "B. weren't", answer_3: "C. wasn't",answer_4: "D. haven't been"} , correct_answer: "B"} ,
     {question: "Q. They ... shrimps. (already/eat)", answers:{answer_1: "A. have eaten", answer_2: "B. ate", answer_3: "C. has eaten",answer_4: "D. eated"} , correct_answer: "A"} ,
     {question: "Q. How long .... each other before they .... to get married?", answers:{answer_1: "A. had they known, decided", answer_2: "B. knew, decided", answer_3: "C. did they know, had decided",answer_4: "D. do they know, decide"} , correct_answer: "A"} ,
-]
-let list_question3 = [
 
     {question: "Q. Before he went out of the office, Jim ... the door.", answers:{answer_1: "A. locked", answer_2: "B. had locked", answer_3: "C. had lock",answer_4: "D. has locked"} , correct_answer: "B"} ,
     {question: "Q. Mrs Rush .... her children because they ... the window.", answers:{answer_1: "A/ had punished, had broken", answer_2: "B/ punished, had broken", answer_3: "C/ punished, broke",answer_4: "D/ punishes, breaks"} , correct_answer: "C"} ,
     {question: "Q. Where ..........(you / be) yesterday?", answers:{answer_1: "A. were you", answer_2: "B. you were ", answer_3: "C. did you be",answer_4: "D. was you"} , correct_answer: "A"} ,
     {question: "Q. ..... your homework yet?", answers:{answer_1: "A. Were you do", answer_2: "B. Has you done...", answer_3: "C. Did you do...",answer_4: "D. Have you done..."} , correct_answer: "D"} ,
     {question: "Q.  If it snows, ________ still drive to the coast? ", answers:{answer_1: "A. will you", answer_2: "B. would you", answer_3: "C. would you had",answer_4: "D. would you have"} , correct_answer: "A"} ,
-]
-
-let list_question4 = [
     {question: "Q. What would you do if it ________ on your wedding day? ", answers:{answer_1: "A. rained", answer_2: "B.  will rain", answer_3: "C. would rain",answer_4: "D. would have rained"} , correct_answer: "A"} ,
     {question: "Q. If she comes, I _____ call you. ", answers:{answer_1: "A. will", answer_2: "B. would", answer_3: "C. would have",answer_4: "D. would had"} , correct_answer: "A"} ,
     {question: "Q. If I eat peanut butter, I ________ sick. ", answers:{answer_1: "A. would have gotten", answer_2: "B. would get", answer_3: "C. get",answer_4: "D. got"} , correct_answer: "C"} ,
@@ -441,8 +432,6 @@ let list_question4 = [
     {question: "Q. If they had not _____ the car, I would have driven you. ", answers:{answer_1: "A.  take", answer_2: "B. taken", answer_3: "C. would take",answer_4: "D. would have taken"} , correct_answer: "B"} 
 ]
 
-let list_of_question = [list_question1,list_question2,list_question3,list_question4];
-var list_of_questions = list_of_question[Math.floor(Math.random()*list_of_question.length)]
 
 // VARIABLES-----------------
 let list_of_user_answer = []
